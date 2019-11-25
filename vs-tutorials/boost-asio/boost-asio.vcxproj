@@ -23,6 +23,7 @@
     <ClCompile Include="boost-asio.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="nuget.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
