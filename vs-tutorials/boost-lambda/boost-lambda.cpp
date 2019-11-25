@@ -1,4 +1,4 @@
-// https://www.boost.org/doc/libs/1_64_0/more/getting_started/windows.html
+// https://www.boost.org/doc/libs/1_71_0/more/getting_started/windows.html
 
 // Usage: Enter some number in the console and press enter
 
