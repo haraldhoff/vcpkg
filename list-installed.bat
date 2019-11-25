@@ -1,1 +1,1 @@
-vcpkg\vcpkg list
+vcpkg list
