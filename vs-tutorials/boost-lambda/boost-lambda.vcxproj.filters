@@ -3,8 +3,4 @@
   <ItemGroup>
     <ClCompile Include="boost-lambda.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="nuget.config" />
-  </ItemGroup>
 </Project>
