@@ -23,6 +23,9 @@
     <ClCompile Include="boost-lambda.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="nuget.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
