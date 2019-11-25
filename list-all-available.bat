@@ -1,1 +1,1 @@
-vcpkg\vcpkg search
+vcpkg search
