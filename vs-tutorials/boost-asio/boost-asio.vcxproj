@@ -22,10 +22,6 @@
   <ItemGroup>
     <ClCompile Include="boost-asio.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="nuget.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{E7BB622F-05EE-4861-B55F-A81065F6CA4B}</ProjectGuid>
