@@ -12,5 +12,5 @@ Under contruction...
 * Run the project
 
 
-Troubleshooting
-* 
+Troubleshooting   
+* "The Windows SDK Version .... was not found"
