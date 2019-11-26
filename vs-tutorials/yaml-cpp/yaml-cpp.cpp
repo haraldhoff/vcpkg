@@ -1,17 +1,13 @@
-// https://github.com/jbeder/yaml-cpp/wiki/How-To-Parse-A-Document-(Old-API)
+// https://github.com/jbeder/yaml-cpp/wiki/Tutorial
 
-#include <fstream>
 #include "yaml-cpp/yaml.h"
+#include <iostream>
 
 int main()
 {
-    std::ifstream fin("test.yaml");
-    YAML::Parser parser(fin);
-
-    YAML::Node doc;
-    while(parser.GetNextDocument(doc)) {
-       // ...
-    }
-
-    return 0;
+	YAML::Node primes = YAML::Load("[2, 3, 5, 7, 11]");
+	for (std::size_t i = 0; i < primes.size(); i++)
+	{
+		std::cout << primes[i].as<int>() << "\n";
+	}
 }
