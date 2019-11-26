@@ -11,9 +11,10 @@ Under contruction...
 * Build the solution, it should compile without errors (famous last words... :-)
 * Run the project
 
+.
 
 Troubleshooting   
-* "The Windows SDK Version .... was not found"
+* Error - "The Windows SDK Version .... was not found"
   * Right Click on the project "yaml-cpp" and select properties
   * Under "Configuration Properties / General" select the latest Windows SDK Version
   * Press OK and try to build the solution again
