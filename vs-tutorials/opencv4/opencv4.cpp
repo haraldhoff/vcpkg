@@ -1,5 +1,11 @@
+// https://gist.github.com/EyalAr/3940636
+// https://docs.opencv.org/master/examples.html
+
+// opencv2 is actually opencv4 ?
+
 #include "opencv2/opencv.hpp"
 #include "opencv2/highgui/highgui.hpp"
+#include <opencv2/core/types_c.h>
 
 using namespace cv;
 
