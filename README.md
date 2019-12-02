@@ -7,7 +7,7 @@ Under contruction...
 * Enter 'integrate-install-project.bat' and notice the output
 * Open Visual Studio (2017 and up) and open the solution in the 'vs-tutorials\yaml-cpp' folder
 * Go to Tools->NuGet Package Manager->Package Manager Console and paste:   
-  Install-Package vcpkg.C.dev.vcpkg -Source "C:\opt\vcpkg\scripts\buildsystems"
+  Install-Package vcpkg.C.opt.vcpkg -Source "C:\opt\vcpkg\scripts\buildsystems"
 * Build the solution, it should compile without errors (famous last words... :-)
 * Run the project
 
