@@ -1,6 +1,6 @@
 Under contruction...   
 
-* Clone this repo to c:\opt   (so that it becomes c:\opt\vcpkg)
+* Clone this repo to c:\opt      (so that it becomes c:\opt\vcpkg -- strongly recommended to avoid problems)
 * Open a terminal, and go into folder c:\opt\vcpkg
 * Run 'bootstrap-vcpkg.bat' and let it complete
 * Enter 'install-package.bat yaml-cpp' and let complete
