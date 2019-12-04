@@ -21,7 +21,7 @@ set(CMAKE_CXX_STANDARD 17)
 find_package(unofficial-fontconfig CONFIG REQUIRED)
 
 find_package(unofficial-nana CONFIG REQUIRED)
-add_executable("nana-gui" gui1.cpp)
+add_executable("nana-gui" gui.cpp)
 target_link_libraries("nana-gui" PRIVATE
   unofficial::nana::nana
   unofficial::fontconfig::fontconfig)
