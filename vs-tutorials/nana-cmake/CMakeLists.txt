@@ -19,12 +19,16 @@ set(CMAKE_CXX_STANDARD 17)
 ## ==> Target: "nana-gui" - Executable: "nana-gui"
 
 find_package(unofficial-fontconfig CONFIG REQUIRED)
-
 find_package(unofficial-nana CONFIG REQUIRED)
-add_executable("nana-gui" gui.cpp)
+
+add_executable("nana-gui"
+  gui.cpp
+  )
+
 target_link_libraries("nana-gui" PRIVATE
   unofficial::nana::nana
-  unofficial::fontconfig::fontconfig)
+  unofficial::fontconfig::fontconfig
+  )
 
 # Install directory relative to ${CMAKE_PREFIX_PATH}
 install(TARGETS "nana-gui" DESTINATION ./bin)
