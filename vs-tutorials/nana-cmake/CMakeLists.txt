@@ -2,17 +2,9 @@ cmake_minimum_required(VERSION 3.9)
 
 #======= Establish toolchain (must be done before specifying project) =========#
 
-if (WIN32)
-  if (NOT DEFINED CMAKE_TOOLCHAIN_FILE)
-    if (NOT DEFINED ENV{VCPKG_ROOT})
-      set(ENV{VCPKG_ROOT} "C:/opt/vcpkg")
-    endif()
-    set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
-  endif()
-endif()
-
-if (DEFINED CMAKE_TOOLCHAIN_FILE)
-  message(" [INFO] CMAKE_TOOLCHAIN_FILE = ${CMAKE_TOOLCHAIN_FILE}")
+if(DEFINED ENV{VCPKG_ROOT} AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+  set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
+    message(" [INFO] VCPKG CMAKE_TOOLCHAIN_FILE = ${CMAKE_TOOLCHAIN_FILE}")
 endif()
 
 
@@ -20,6 +12,7 @@ endif()
 
 project(nanagui)
 set(CMAKE_CXX_STANDARD 17)
+
 
 #========== Targets Configurations ============#
 
