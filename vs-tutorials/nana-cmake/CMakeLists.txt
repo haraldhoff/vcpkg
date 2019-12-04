@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 3.9)
 
 set(CMAKE_TOOLCHAIN_FILE "C:/opt/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
-message(" [INFO] VCPKG CMAKE_TOOLCHAIN_FILE = ${CMAKE_TOOLCHAIN_FILE}")
 
 #======= Global Project Configuration =========#
 
 project(nanagui)
-set(CMAKE_CXX_STANDARD 17)     
+set(CMAKE_CXX_STANDARD 17)
 
 #========== Targets Configurations ============#
 
@@ -19,9 +18,9 @@ target_link_libraries(gui1 PRIVATE
 
 # Add target to run executable gui1 (similar to $ make run)
 add_custom_target(run-gui1
-    COMMAND gui1
-    DEPENDS gui1
-    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
+  COMMAND gui1
+  DEPENDS gui1
+  WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
 )
 
 # Install directory relative to ${CMAKE_PREFIX_PATH}
