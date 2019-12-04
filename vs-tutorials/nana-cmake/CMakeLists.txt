@@ -1,6 +1,20 @@
 cmake_minimum_required(VERSION 3.9)
 
-set(CMAKE_TOOLCHAIN_FILE "C:/opt/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
+#======= Establish toolchain (must be done before specifying project) =========#
+
+if (WIN32)
+  if (NOT DEFINED CMAKE_TOOLCHAIN_FILE)
+    if (NOT DEFINED ENV{VCPKG_ROOT})
+      set(ENV{VCPKG_ROOT} "C:/opt/vcpkg")
+    endif()
+    set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
+  endif()
+endif()
+
+if (DEFINED CMAKE_TOOLCHAIN_FILE)
+  message(" [INFO] CMAKE_TOOLCHAIN_FILE = ${CMAKE_TOOLCHAIN_FILE}")
+endif()
+
 
 #======= Global Project Configuration =========#
 
