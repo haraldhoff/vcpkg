@@ -1,3 +1,6 @@
+# Subversion
+.svn/
+
 # Build install logs
 vcpkg-info/
 
