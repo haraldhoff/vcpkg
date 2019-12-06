@@ -4,4 +4,4 @@ if "%VCPKG_ROOT%"== "" (
   set VCPKG_ROOT=C:\opt\vcpkg
 )
 
-cmake -G "Visual Studio 15 2017 Win64" .
+cmake -G "Visual Studio 15 2017 Win64" -S . -B build
