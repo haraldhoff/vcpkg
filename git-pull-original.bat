@@ -1,1 +1,1 @@
-https://github.com/microsoft/vcpkg.git
+git pull https://github.com/microsoft/vcpkg.git
