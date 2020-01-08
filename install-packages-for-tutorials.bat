@@ -5,5 +5,6 @@
 call install-package.bat yaml-cpp
 call install-package.bat nana
 call install-package.bat fontconfig
+call install-package.bat cppzmq
 call install-package.bat opencv4
 call install-package.bat boost
