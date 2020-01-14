@@ -1,1 +1,1 @@
-vcpkg search
+vcpkg search --x-full-desc
