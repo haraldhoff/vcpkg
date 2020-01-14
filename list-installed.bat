@@ -1,1 +1,1 @@
-vcpkg list
+vcpkg list --x-full-desc
