@@ -11,7 +11,7 @@ First time usage:
 * Open Visual Studio (2017/2019) and open the solution in the 'vs-tutorials\yaml-cpp' folder
 * Go to Tools->NuGet Package Manager->Package Manager Console and paste:   
   Install-Package vcpkg.C.opt.vcpkg -Source "C:\opt\vcpkg\scripts\buildsystems"
-* Build the solution, it should compile without errors (famous last words... :-)
+* Build the solution, it should compile without errors (famous last words... :-)  (Se troubleshooting if not)
 * Run the project
 
 .
