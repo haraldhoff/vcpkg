@@ -1,4 +1,4 @@
-Under contruction...   
+First time
 
 * Clone this repo to c:\opt   
   (So that it becomes c:\opt\vcpkg -- strongly recommended to use this to avoid problems)
@@ -15,9 +15,17 @@ Under contruction...
 * Run the project
 
 .
+Add vcpkg to Visual Studio Nuget package sources
+* In Visual Studio - select Tools / Options / Nuget Package Manager / Package Sources
+* Click the + button to add a new source
+* Enter Name   : vcpkg
+* Enter Source : C:\opt\vcpkg\scripts\buildsystems
+* Click OK
+* All vcpkg packages should now work with Nuget package restore etc.
 
+.
 Troubleshooting   
 * Error - "The Windows SDK Version .... was not found"
-  * Right Click on the project "yaml-cpp" and select properties
+  * Right Click on the project (e.g yaml-cpp) and select properties
   * Under "Configuration Properties / General" select the latest Windows SDK Version
   * Press OK and try to build the solution again
