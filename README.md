@@ -28,6 +28,6 @@ Add vcpkg to Visual Studio Nuget package sources
 
 Troubleshooting   
 * Error - "The Windows SDK Version .... was not found"
-  * Right Click on the project (e.g yaml-cpp) and select properties
+  * Righ-click on the project (e.g yaml-cpp) and select properties
   * Under "Configuration Properties / General" select the latest Windows SDK Version
   * Press OK and try to build the solution again
