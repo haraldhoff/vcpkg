@@ -4,9 +4,9 @@ First time usage:
   (So that it becomes c:\opt\vcpkg -- strongly recommended to use this to avoid problems)
 * Open a terminal, and go into folder c:\opt\vcpkg
 * Run 'bootstrap-vcpkg.bat' and let it complete
-* Optional: Enter 'list-all-available.bat' to show all packages that are available
+* Enter 'list-all-available.bat' to show all packages that are available
 * Enter 'install-package.bat yaml-cpp' and let complete
-* Optional: Enter 'list-installed.bat' to show all installed packages
+* Enter 'list-installed.bat' to show all installed packages
 * Enter 'integrate-install-project.bat' and notice the output
 * Open Visual Studio (2017 and up) and open the solution in the 'vs-tutorials\yaml-cpp' folder
 * Go to Tools->NuGet Package Manager->Package Manager Console and paste:   
