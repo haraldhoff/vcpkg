@@ -1,4 +1,4 @@
-First time
+First time usage:
 
 * Clone this repo to c:\opt   
   (So that it becomes c:\opt\vcpkg -- strongly recommended to use this to avoid problems)
@@ -15,6 +15,7 @@ First time
 * Run the project
 
 .
+
 Add vcpkg to Visual Studio Nuget package sources
 * In Visual Studio - select Tools / Options / Nuget Package Manager / Package Sources
 * Click the + button to add a new source
@@ -24,6 +25,7 @@ Add vcpkg to Visual Studio Nuget package sources
 * All vcpkg packages should now work with Nuget package restore etc.
 
 .
+
 Troubleshooting   
 * Error - "The Windows SDK Version .... was not found"
   * Right Click on the project (e.g yaml-cpp) and select properties
