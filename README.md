@@ -8,7 +8,7 @@ First time usage:
 * Enter 'install-package.bat yaml-cpp' and let complete
 * Enter 'list-installed.bat' to show all installed packages
 * Enter 'integrate-install-project.bat' and notice the output
-* Open Visual Studio (2017 and up) and open the solution in the 'vs-tutorials\yaml-cpp' folder
+* Open Visual Studio (2017/2019) and open the solution in the 'vs-tutorials\yaml-cpp' folder
 * Go to Tools->NuGet Package Manager->Package Manager Console and paste:   
   Install-Package vcpkg.C.opt.vcpkg -Source "C:\opt\vcpkg\scripts\buildsystems"
 * Build the solution, it should compile without errors (famous last words... :-)
