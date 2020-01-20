@@ -1,20 +1,43 @@
-// https://www.boost.org/doc/libs/1_71_0/doc/html/boost_asio/tutorial/tuttimer1.html
+// https://github.com/google/googletest/tree/master/googletest/samples
 
-#include <iostream>
-#include <chrono>
-#include <boost/asio.hpp>
+// Copyright 2005, Google Inc.
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//     * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//     * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-using namespace std;
+// A sample program demonstrating using Google C++ testing framework.
 
-int main()
-{
-	cout << "Waiting 3000 milliseconds -- calling boost::asio::chrono::milliseconds(3000)" << endl;
-	auto t1 = chrono::high_resolution_clock::now();
-	boost::asio::io_context io;
-	boost::asio::steady_timer t(io, boost::asio::chrono::milliseconds(3000));
-	t.wait();
-	auto t2 = chrono::high_resolution_clock::now();
-	auto ms = chrono::duration_cast<chrono::milliseconds>(t2 - t1).count();
-	cout << "Finished! --  std::chrono high precision timers says duration is " << ms << " [ms]" << endl;
-	return 0;
-}
+#ifndef GTEST_SAMPLES_SAMPLE1_H_
+#define GTEST_SAMPLES_SAMPLE1_H_
+
+// Returns n! (the factorial of n).  For negative n, n! is defined to be 1.
+int Factorial(int n);
+
+// Returns true if and only if n is a prime number.
+bool IsPrime(int n);
+
+#endif  // GTEST_SAMPLES_SAMPLE1_H_
