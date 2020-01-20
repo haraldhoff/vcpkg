@@ -7,6 +7,7 @@
 #include "opencv2/highgui/highgui.hpp"
 #include <opencv2/core/types_c.h>
 
+using namespace std;
 using namespace cv;
 
 int main(int argc, char** argv) {

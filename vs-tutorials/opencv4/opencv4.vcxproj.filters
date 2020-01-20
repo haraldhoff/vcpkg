@@ -3,4 +3,7 @@
   <ItemGroup>
     <ClCompile Include="opencv4.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
