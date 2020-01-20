@@ -3,11 +3,13 @@
 #include "yaml-cpp/yaml.h"
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-	YAML::Node primes = YAML::Load("[2, 3, 5, 7, 11]");
+	auto document = "[2, 3, 5, 7, 11]";
+	auto primes = YAML::Load(document);
+
 	for (std::size_t i = 0; i < primes.size(); i++)
-	{
 		std::cout << primes[i].as<int>() << "\n";
-	}
 }
