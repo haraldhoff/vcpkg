@@ -3,4 +3,7 @@
   <ItemGroup>
     <ClCompile Include="boost-asio.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
