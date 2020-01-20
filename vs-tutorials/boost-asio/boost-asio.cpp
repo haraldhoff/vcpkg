@@ -8,10 +8,10 @@ using namespace std;
 
 int main()
 {
-	cout << "Waiting 3 seconds -- calling boost::asio::chrono::seconds(3)" << endl;
+	cout << "Waiting 3000 milliseconds -- calling boost::asio::chrono::milliseconds(3000)" << endl;
 	auto t1 = chrono::high_resolution_clock::now();
 	boost::asio::io_context io;
-	boost::asio::steady_timer t(io, boost::asio::chrono::seconds(3));
+	boost::asio::steady_timer t(io, boost::asio::chrono::milliseconds(3000));
 	t.wait();
 	auto t2 = chrono::high_resolution_clock::now();
 	auto ms = chrono::duration_cast<chrono::milliseconds>(t2 - t1).count();
