@@ -28,6 +28,14 @@ Add vcpkg to Visual Studio Nuget package sources
 
 Troubleshooting   
 * Error - "The Windows SDK Version .... was not found"
-  * Righ-click on the project (e.g yaml-cpp) and select properties
+  * Right-click on the project (e.g yaml-cpp) and select properties
   * Under "Configuration Properties / General" select the latest Windows SDK Version
   * Press OK and try to build the solution again
+
+* Error - "NuGet Package restore failed for project ..."
+  * Click on packages.config
+  * Press DEL/Delete button
+  * Choose Delete to permanently delete
+  * Go to Tools->NuGet Package Manager->Package Manager Console and paste:   
+    Install-Package vcpkg.C.opt.vcpkg -Source "C:\opt\vcpkg\scripts\buildsystems"
+
