@@ -1,20 +1,38 @@
-// https://www.boost.org/doc/libs/1_71_0/doc/html/boost_asio/tutorial/tuttimer1.html
+// https://learning-0mq-with-pyzmq.readthedocs.io/en/latest/pyzmq/patterns/pubsub.html
 
 #include <iostream>
-#include <chrono>
-#include <boost/asio.hpp>
+#include <sstream>
+#include <string.h>
+#include <string>
+#include <thread>
+#include <zmq.hpp>
 
 using namespace std;
 
-int main()
+void publisher()
 {
-	cout << "Waiting 3000 milliseconds -- calling boost::asio::chrono::milliseconds(3000)" << endl;
-	auto t1 = chrono::high_resolution_clock::now();
-	boost::asio::io_context io;
-	boost::asio::steady_timer t(io, boost::asio::chrono::milliseconds(3000));
-	t.wait();
-	auto t2 = chrono::high_resolution_clock::now();
-	auto ms = chrono::duration_cast<chrono::milliseconds>(t2 - t1).count();
-	cout << "Finished! --  std::chrono high precision timers says duration is " << ms << " [ms]" << endl;
+	// https://en.cppreference.com/w/cpp/language/try_catch
+	try
+	{
+		zmq::context_t context(1);
+		zmq::socket_t publisher(context, ZMQ_PUB);
+		std::string address("tcp://127.0.0.1:52001");
+		publisher.bind(address);
+	}
+	catch (const std::exception& e)
+	{
+		cout << e.what();
+	}
+
+	printf("");
+}
+
+void subscriber()
+{
+}
+
+int main(int argc, char *argv[])
+{
+	publisher();
 	return 0;
 }
