@@ -71,6 +71,7 @@ int main(int argc, char *argv[])
 {
 	if (argc <= 1)
 	{
+		printf("zeromq\n");
 		printf("Usage : specify either pub or sub as arguments\n");
 	} else
 	{
