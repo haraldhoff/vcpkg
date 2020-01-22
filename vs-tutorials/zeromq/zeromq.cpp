@@ -1,27 +1,38 @@
 // https://learning-0mq-with-pyzmq.readthedocs.io/en/latest/pyzmq/patterns/pubsub.html
 
-#include <iostream>
-#include <sstream>
-#include <string.h>
+#include <zmq.h>
+//#include "zhelpers.h"
+
 #include <string>
-#include <thread>
-#include <zmq.hpp>
 
 using namespace std;
 
 void publisher()
 {
-	// https://en.cppreference.com/w/cpp/language/try_catch
-	try
+	int rc = 0;
+
+	void *context = zmq_ctx_new();
+	printf("publisher : setup context ok\n");
+
+	void *publisher = zmq_socket(context, ZMQ_PUB);
+	printf("publisher : setup publisher ok\n");
+
+	string address = "tcp://127.0.0.1:52001";
+	zmq_bind(publisher, address.c_str());
+	printf("publisher : bind address ok -- %s\n", address.c_str());
+
+	for (int i = 0; i < 1000; i++)
 	{
-		zmq::context_t context(1);
-		zmq::socket_t publisher(context, ZMQ_PUB);
-		std::string address("tcp://127.0.0.1:52001");
-		publisher.bind(address);
-	}
-	catch (const std::exception& e)
-	{
-		cout << e.what();
+		char* topic = (char*)"NEWSFLASH";
+		char content[256];
+
+		sprintf_s(content, "Hello World %d", i);
+
+		rc = zmq_send(publisher, topic, strlen(topic), ZMQ_SNDMORE);
+		rc = zmq_send(publisher, content, strlen(content), 0);
+
+		printf("publisher : publishing message on topic=%s, content=%s\n", topic, content);
+		zmq_sleep(1);
 	}
 
 	printf("");
@@ -31,7 +42,7 @@ void subscriber()
 {
 }
 
-int main(int argc, char *argv[])
+int main()
 {
 	publisher();
 	return 0;
