@@ -20,10 +20,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="gtest.cpp" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ClCompile Include="gtest_main.cpp" />
+    <ClCompile Include="sample1.cpp" />
+    <ClCompile Include="sample1_unittest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sample1.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
