@@ -4,6 +4,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ffmpeg.c" />
+    <ClCompile Include="ffmpeg.cpp" />
   </ItemGroup>
 </Project>

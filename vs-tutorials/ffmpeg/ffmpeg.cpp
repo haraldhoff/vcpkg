@@ -27,8 +27,13 @@
   */
 
 #include <stdio.h>
+
+// Note: ffmpeg uses C linkage
+extern "C"
+{
 #include <libavformat/avformat.h>
 #include <libavutil/dict.h>
+}
 
 int main(int argc, char **argv)
 {
