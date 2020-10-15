@@ -1,5 +1,8 @@
+@echo .
+@echo .
 @echo Installing packages for tutorials.
 @echo Please wait... This can take a couple of hours...
+@echo .
 @echo .
 
 call install-package.bat yaml-cpp

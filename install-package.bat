@@ -12,6 +12,8 @@ goto out
 :ok2
 if exist "vcpkg.exe" goto ok2:
 call bootstrap-vcpkg.bat
+echo .
+echo .
 
 :ok3:
 echo Installing package %1, logging output to vcpkg-info\%1.txt
