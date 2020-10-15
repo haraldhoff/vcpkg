@@ -1,6 +1,7 @@
-C:\dev\vcpkg>vcpkg integrate project
-Created nupkg: C:\dev\vcpkg\scripts\buildsystems\vcpkg.C.dev.vcpkg.1.0.0.nupkg
+
+C:\opt\vcpkg>vcpkg integrate project 
+Created nupkg: C:\opt\vcpkg\scripts\buildsystems\vcpkg.C.opt.vcpkg.1.0.0.nupkg
 
 With a project open, go to Tools->NuGet Package Manager->Package Manager Console and paste:
-    Install-Package vcpkg.C.dev.vcpkg -Source "C:\dev\vcpkg\scripts\buildsystems"
+    Install-Package vcpkg.C.opt.vcpkg -Source "C:\opt\vcpkg\scripts\buildsystems"
 
