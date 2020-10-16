@@ -10,7 +10,7 @@ echo No package specified
 goto out
 
 :ok2
-if exist "vcpkg.exe" goto ok2:
+if exist "vcpkg.exe" goto ok3:
 call bootstrap-vcpkg.bat
 echo .
 echo .
