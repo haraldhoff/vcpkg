@@ -13,6 +13,6 @@ call install-package.bat cppzmq
 call install-package.bat opencv4
 call install-package.bat boost
 
+@echo .
 
-call integrate-install-project-level.bat
-
+call integrate-install-project-level.bat > nul
