@@ -31,7 +31,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{E7BB622F-05EE-4861-B55F-A81065F6CA4B}</ProjectGuid>
+    <ProjectGuid>{23ABF4E9-E44A-4A41-9917-19D9B8FD1165}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>zeromq</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>

@@ -27,7 +27,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{E7BB622F-05EE-4861-B55F-A81065F6CA4B}</ProjectGuid>
+    <ProjectGuid>{21A6B13D-C8A8-4695-B245-E163F0F7F4D6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ffmpeg</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
