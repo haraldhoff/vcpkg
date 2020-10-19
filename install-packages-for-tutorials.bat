@@ -12,3 +12,7 @@ call install-package.bat fontconfig
 call install-package.bat cppzmq
 call install-package.bat opencv4
 call install-package.bat boost
+
+
+call integrate-install-project-level.bat
+
