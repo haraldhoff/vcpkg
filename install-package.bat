@@ -1,7 +1,7 @@
 @echo off
 
-if "%cd%" == "C:\opt\vcpkg" goto ok1
-echo This vcpkg git repository must be checked out to C:\opt\vcpkg in order to work properly
+if "%cd%" == "C:\dev\vcpkg" goto ok1
+echo This vcpkg git repository must be checked out to C:\dev\vcpkg in order to work properly
 goto out
 
 :ok1
